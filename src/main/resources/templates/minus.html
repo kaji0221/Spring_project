@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minus</title>
+</head>
+<body>
+	<h1>引き算</h1>
+	<form action="/minus" method="get">
+		<input type="number" name="num1" required> - <input
+			type="number" name="num2" required>
+		<button type="submit">=</button>
+	</form>
+	<h2>
+		<span th:text="${result}"></span>
+	</h2>
+</body>
+</html>
