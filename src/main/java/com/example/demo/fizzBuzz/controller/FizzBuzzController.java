@@ -15,9 +15,10 @@ public class FizzBuzzController {
 		this.fizzBuzzService = fizzBuzzService;
 	}
 
-	@GetMapping("fuzzbuzz")
+	@GetMapping("fizzbuzz")
 	public String showFizzBuzz(Model model) {
 		List<String> fizzBuzzList = fizzBuzzService.generateFizzBuzzList(100);
+		fizzBuzzList.add(0, "FizzBuzz");
 		model.addAttribute("numbers", fizzBuzzList);
 		return "fizzBuzz.html";
 	}
