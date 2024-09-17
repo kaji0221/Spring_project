@@ -1,23 +1,20 @@
 package com.example.demo.animalsAPI.data;
 
-public class AnimalData {
-	private int id;
-	private String name;
-	private String japaneseName;
-	private String cry;
-	
-	public AnimalData() {
-    }
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
-	public AnimalData(int id, String name, String japaneseName, String cry) {
-		this.id = id;
-		this.name = name;
-		this.japaneseName = japaneseName;
-		this.cry = cry;
-	}
-	
-	public int getId() {return id;}
-	public String getName() {return name;}
-	public String getJapaneseName() {return japaneseName;}
-	public String getCry() {return cry;}
+@Data
+public class AnimalData {
+
+	@JsonProperty("id")
+	private int id;
+
+	@JsonProperty("name")
+	private String name;
+
+	@JsonProperty("japanese_name")
+	private String japaneseName;
+
+	@JsonProperty("cry")
+	private String cry;
 }
